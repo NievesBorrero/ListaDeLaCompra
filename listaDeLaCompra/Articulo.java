@@ -1,6 +1,6 @@
-package estructurasIII.listaDeLaCompra;
+package listaDeLaCompra;
 /**
- * Clase para crear un objeto artÌculo
+ * Clase para crear un objeto art√≠culo
  * @author Nieves Borrero
  *
  */
@@ -24,7 +24,7 @@ public class Articulo {
 		setCodigo(codigo);
 	}
 	/**
-	 * Controla que los valores, a la hora de crear el objeto, sean v·lidos.
+	 * Controla que los valores, a la hora de crear el objeto, sean v√°lidos.
 	 * @param nombre
 	 * @param existencias
 	 * @param minimo
@@ -36,7 +36,7 @@ public class Articulo {
 		if (minimo<0)
 			return null;
 		return new Articulo(nombre, existencias, minimo); // Si el minimo no es mayor que las existencias y el
-															// minimo es v·lido, devuelve un nuevo artÌculo
+															// minimo es v√°lido, devuelve un nuevo art√≠culo
 		}
 	
 	Articulo(int codigo) {
@@ -81,10 +81,10 @@ public class Articulo {
 		return existencias;
 	}
 	/**
-	 * Modifica el n∫ de existencias
+	 * Modifica el n¬∫ de existencias
 	 * @param int (existencias)
 	 * @return true o false si no ha podido modificarlo porque existencias 
-	 * sea un valor inv·lido.
+	 * sea un valor inv√°lido.
 	 */
 	private boolean setExistencias(int existencias) {
 		if(existencias<0)
@@ -97,7 +97,7 @@ public class Articulo {
 		return minimo;
 	}
 	/**
-	 * Permite modificar el mÌnimo del artÌculo
+	 * Permite modificar el m√≠nimo del art√≠culo
 	 * @param minimo
 	 * @return boolean
 	 */
@@ -108,7 +108,7 @@ public class Articulo {
 		return true;
 	}
 	/**
-	 * Disminuye el n∫ de existencias
+	 * Disminuye el n¬∫ de existencias
 	 * @param int (Cantidad de productos que se consumen)
 	 * @return boolean
 	 */
@@ -117,14 +117,14 @@ public class Articulo {
 		if(cantidad<0)
 			return false;//Si la cantidad es negativa, no puede consumir
 		if(!setExistencias(getExistencias()-cantidad)){//si el setExistencias me devuelve false
-		setExistencias(0); 								//porque pretende comer m·s de lo que hay
+		setExistencias(0); 								//porque pretende comer m√°s de lo que hay
 		return false;
 		}
 		return true;//Si puede consumir sin problemas
 	}
 	
 	/**
-	 * Aumenta el n∫ de existencias
+	 * Aumenta el n¬∫ de existencias
 	 * @param int (Cantidad de productos que se compran)
 	 * @return boolean
 	 */
