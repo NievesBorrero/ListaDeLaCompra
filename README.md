@@ -1,1 +1,1 @@
-# ListaDeLaCompra
+ListaDeLaCompra. Ejercicio que consiste en implementar un programa que gestione una lista de la compra de forma automática. Se dispondrá de una lista de artículos y de sus existencias. En el momento en el que la cantidad de artículos llegue a un límite mínimo, dicho artículo aparecerá en la lista de la compra. Cada vez que el usuario utilice uno de los artículos se decrementarán las existencias de dicho artículo. De igual forma, cada vez que el usuario compre el artículo, se incrementarán las existencias.
