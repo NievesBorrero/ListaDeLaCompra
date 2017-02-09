@@ -2,7 +2,7 @@ package listaDeLaCompra;
 /**
  * Clase para crear un objeto artículo
  * @author Nieves Borrero
- *
+ * @version 1.0
  */
 public class Articulo {
 	private int codigo;
