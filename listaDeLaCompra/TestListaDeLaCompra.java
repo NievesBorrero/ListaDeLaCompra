@@ -1,25 +1,25 @@
-package estructurasIII.listaDeLaCompra;
+package listaDeLaCompra;
 
 import utiles.Menu;
 import utiles.Teclado;
 
 /**
- * 8.2. Genera un interfaz con el usuario que permita entre otras acciones:
-*	e. Añadir un producto nuevo a la lista.
+*  Genera un interfaz con el usuario que permita entre otras acciones:
+*	e. AÃ±adir un producto nuevo a la lista.
 *	f. Eliminar un elemento de la lista.
-*	g. Incrementar las existencias de un artículo.
-*	h. Decrementar las existencias de un artículo.
-*	i. Modificar la cantidad mínima del artículo.
-*	j. Mostrar la lista de todos los artículos.
+*	g. Incrementar las existencias de un artÃ­culo.
+*	h. Decrementar las existencias de un artÃ­culo.
+*	i. Modificar la cantidad mÃ­nima del artÃ­culo.
+*	j. Mostrar la lista de todos los artÃ­culos.
 *	k. Mostrar la lista de la compra.
  * @author Nieves Borrero Barea.
- *
+ * @version 1.0
  */
 public class TestListaDeLaCompra {
 	static ListaDeLaCompra listaDeLaCompra;
 	
 	public static void main(String[] args) {
-		Menu menu= new Menu("OPCIONES:", new String[]{"Añadir a la nevera",
+		Menu menu= new Menu("OPCIONES:", new String[]{"AÃ±adir a la nevera",
 				"Eliminar de la nevera", "Comprar", "consumir", 
 				"Modificar cantidad minima de un producto","Mostrar nevera",
 				"Mostrar lista de la compra","Salir" });
@@ -28,7 +28,7 @@ public class TestListaDeLaCompra {
 		int opcion;
 		 do{
 			switch(opcion=menu.gestionar()){
-			 	case 1: añadirProducto(); break;
+			 	case 1: aÃ±adirProducto(); break;
 			 	case 2: eliminarProducto();break;
 			 	case 3: comprarProducto();break;
 			 	case 4: consumirProducto();break;
@@ -76,7 +76,7 @@ public class TestListaDeLaCompra {
 			System.out.println("El articulo no existe");
 	}
 
-	private static void añadirProducto() {
+	private static void aÃ±adirProducto() {
 		Articulo articulo;
 		String nombre;
 		int existencias;
@@ -86,9 +86,9 @@ public class TestListaDeLaCompra {
 			nombre=Teclado.leerCadena("Nombre:");
 			existencias=Teclado.leerEntero("Existencias:");
 			minimo=Teclado.leerEntero("Minimo:");
-			articulo=listaDeLaCompra.añadirProducto(nombre,existencias,minimo);
+			articulo=listaDeLaCompra.aÃ±adirProducto(nombre,existencias,minimo);
 			if(articulo==null){
-				System.out.println("Ese producto ya existe o los valores introducidos no son válidos");
+				System.out.println("Ese producto ya existe o los valores introducidos no son vÃ¡lidos");
 			}
 		}while(articulo==null);
 		
@@ -110,15 +110,15 @@ public class TestListaDeLaCompra {
 	
 
 	private static void pregenerarProductos() {
-		listaDeLaCompra.añadirProducto("Cerveza", 10, 5);
-		listaDeLaCompra.añadirProducto("Queso", 3, 2);
-		listaDeLaCompra.añadirProducto("york", 4, 2);
-		listaDeLaCompra.añadirProducto("platanos", 8, 4);
-		listaDeLaCompra.añadirProducto("naranjas", 8, 4);
-		listaDeLaCompra.añadirProducto("huevos", 12, 4);
-		listaDeLaCompra.añadirProducto("espinacas", 4, 2);
-		listaDeLaCompra.añadirProducto("pizza", 4, 2);
-		listaDeLaCompra.añadirProducto("Bacon", 5, 2);
-		listaDeLaCompra.añadirProducto("mantequilla", 5, 2);
+		listaDeLaCompra.aÃ±adirProducto("Cerveza", 10, 5);
+		listaDeLaCompra.aÃ±adirProducto("Queso", 3, 2);
+		listaDeLaCompra.aÃ±adirProducto("york", 4, 2);
+		listaDeLaCompra.aÃ±adirProducto("platanos", 8, 4);
+		listaDeLaCompra.aÃ±adirProducto("naranjas", 8, 4);
+		listaDeLaCompra.aÃ±adirProducto("huevos", 12, 4);
+		listaDeLaCompra.aÃ±adirProducto("espinacas", 4, 2);
+		listaDeLaCompra.aÃ±adirProducto("pizza", 4, 2);
+		listaDeLaCompra.aÃ±adirProducto("Bacon", 5, 2);
+		listaDeLaCompra.aÃ±adirProducto("mantequilla", 5, 2);
 	}
 }//class
