@@ -1,24 +1,24 @@
-package estructurasIII.listaDeLaCompra;
+package listaDeLaCompra;
 
 import java.util.ArrayList;
 
 /**
- * 8.ListaDeLaCompra. Implementa un programa que gestione una lista de la compra
- * de forma autom·tica. Se dispondr· de una lista de artÌculos y de sus
- * existencias. En el momento en el que la cantidad de artÌculos llegue a un
- * lÌmite mÌnimo, dicho artÌculo aparecer· en la lista de la compra. Cada vez
- * que el usuario utilice uno de los artÌculos se decrementar·n las existencias
- * de dicho artÌculo. De igual forma, cada vez que el usuario compre el
- * artÌculo, se incrementar·n las existencias de dicho artÌculo.Quiz·s sea
- * interesante aÒadir un campo cÛdigo del artÌculo para facilitar la gestiÛn de
- * la lista. Este cÛdigo ha de ser ˙nico (static...) Para ello, genera un
+ * ListaDeLaCompra. Implementa un programa que gestione una lista de la compra
+ * de forma autom√°tica. Se dispondr√° de una lista de art√≠culos y de sus
+ * existencias. En el momento en el que la cantidad de art√≠culos llegue a un
+ * l√≠mite m√≠nimo, dicho art√≠culo aparecer√° en la lista de la compra. Cada vez
+ * que el usuario utilice uno de los art√≠culos se decrementar√°n las existencias
+ * de dicho art√≠culo. De igual forma, cada vez que el usuario compre el
+ * art√≠culo, se incrementar√°n las existencias de dicho art√≠culo.Quiz√°s sea
+ * interesante a√±adir un campo c√≥digo del art√≠culo para facilitar la gesti√≥n de
+ * la lista. Este c√≥digo ha de ser √∫nico (static...) Para ello, genera un
  * interfaz con el usuario que permita entre otras acciones:
- * e. AÒadir un producto nuevo a la lista. 
+ * e. A√±adir un producto nuevo a la lista. 
  * f. Eliminar un elemento de la lista. 
- * g.Incrementar las existencias de un artÌculo. 
- * h. Decrementar las existencias de un artÌculo. 
- * i. Modificar la cantidad mÌnima del artÌculo. 
- * j. Mostrar la lista de todos los artÌculos. 
+ * g.Incrementar las existencias de un art√≠culo. 
+ * h. Decrementar las existencias de un art√≠culo. 
+ * i. Modificar la cantidad m√≠nima del art√≠culo. 
+ * j. Mostrar la lista de todos los art√≠culos. 
  * k. Mostrar la lista de la compra.
  * 
  * @author Nieves Borrero
@@ -29,24 +29,24 @@ public class ListaDeLaCompra {
 	private ArrayList<Articulo> nevera;
 
 	/**
-	 * Constructor que crea una lista de la compra vacÌa.
+	 * Constructor que crea una lista de la compra vac√≠a.
 	 */
 	ListaDeLaCompra() {
 		setNevera(new ArrayList<Articulo>());
 	}
 
 	/**
-	 * Elimina un producto de la nevera, a partir de su cÛdigo
+	 * Elimina un producto de la nevera, a partir de su c√≥digo
 	 * @param index
-	 * @return true si se ha eliminado el elemento, false si no (si el Ìndice
-	 * introducido no es v·lido).
+	 * @return true si se ha eliminado el elemento, false si no (si el √≠ndice
+	 * introducido no es v√°lido).
 	 */
 	boolean remove(int codigo) {
 		Articulo articulo = new Articulo(codigo); 
-		if (!getNevera().contains(articulo)||getNevera().isEmpty())//Si no contiene el artÌculo o la nevera est· vacÌa
+		if (!getNevera().contains(articulo)||getNevera().isEmpty())//Si no contiene el art√≠culo o la nevera est√° vac√≠a
 			return false;
 		Articulo producto = getNevera().get(getNevera().indexOf(articulo));
-		// Producto= de la nevera (getNevera(), el objeto con el Ìndice de artÌculo 
+		// Producto= de la nevera (getNevera(), el objeto con el √≠ndice de art√≠culo 
 		return getNevera().remove(producto);
 	}
 
@@ -58,10 +58,10 @@ public class ListaDeLaCompra {
 	 */
 	boolean comprar(int codigo, int cantidad) {
 		Articulo articulo = new Articulo(codigo); 
-		if (!getNevera().contains(articulo)||getNevera().isEmpty()) //Si no contiene el artÌculo o la nevera est· vacÌa.
+		if (!getNevera().contains(articulo)||getNevera().isEmpty()) //Si no contiene el art√≠culo o la nevera est√° vac√≠a.
 			return false;
 		Articulo producto = getNevera().get(getNevera().indexOf(articulo));
-		// Producto= de la nevera (getNevera(), el objeto con el Ìndice de artÌculo 
+		// Producto= de la nevera (getNevera(), el objeto con el √≠ndice de art√≠culo 
 		return producto.comprar(cantidad);
 	}
 
@@ -81,25 +81,25 @@ public class ListaDeLaCompra {
 	 */
 	boolean consumir(int codigo, int cantidad) {		
 		Articulo articulo = new Articulo(codigo); 
-		if (!getNevera().contains(articulo)||getNevera().isEmpty()) //Si no contiene el artÌculo o la nevera est· vacÌa.
+		if (!getNevera().contains(articulo)||getNevera().isEmpty()) //Si no contiene el art√≠culo o la nevera est√° vac√≠a.
 			return false;
 		Articulo producto = getNevera().get(getNevera().indexOf(articulo));
-		// Producto= de la nevera (getNevera(), el objeto con el Ìndice de artÌculo 
+		// Producto= de la nevera (getNevera(), el objeto con el √≠ndice de art√≠culo 
 		return producto.consumir(cantidad);
 	}
 
 	/**
-	 * Modifica el mÌnimo de existencias de un producto
+	 * Modifica el m√≠nimo de existencias de un producto
 	 * @param int(index)
 	 * @param int(minimo)
 	 * return boolean
 	 */
 	boolean modificarMinimo(int codigo, int minimo) {
 		Articulo articulo = new Articulo(codigo); 
-		if (!getNevera().contains(articulo)||getNevera().isEmpty()) //Si no contiene el artÌculo o la nevera est· vacÌa
+		if (!getNevera().contains(articulo)||getNevera().isEmpty()) //Si no contiene el art√≠culo o la nevera est√° vac√≠a
 			return false;
 		Articulo producto = getNevera().get(getNevera().indexOf(articulo));
-		// Producto= de la nevera (getNevera(), el objeto con el Ìndice de artÌculo 
+		// Producto= de la nevera (getNevera(), el objeto con el √≠ndice de art√≠culo 
 		return producto.setMinimo(minimo);
 	}
 
@@ -127,13 +127,13 @@ public class ListaDeLaCompra {
 	}
 
 	/**
-	 * AÒade un producto a la nevera
+	 * A√±ade un producto a la nevera
 	 * @param nombre
 	 * @param existencias
 	 * @param minimo
 	 * @return articulo
 	 */
-	Articulo aÒadirProducto(String nombre, int existencias, int minimo) {
+	Articulo a√±adirProducto(String nombre, int existencias, int minimo) {
 		Articulo articulo=Articulo.getInstance(nombre, existencias, minimo);
 		for (Articulo producto : getNevera()) {
 			if(producto.getNombre().equalsIgnoreCase(nombre))
