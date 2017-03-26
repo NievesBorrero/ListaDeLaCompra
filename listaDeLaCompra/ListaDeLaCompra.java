@@ -106,22 +106,21 @@ public class ListaDeLaCompra {
 	/**
 	 * Muestra los productos de la nevera
 	 */
-	@Override
 	public String toString() {
 		if(nevera.isEmpty())
 			return "La nevera esta vacia!";
-		String cadena = "";
+		StringBuilder cadena = new StringBuilder("");
 		for (Articulo producto : getNevera()) {
-			cadena += producto.toString() + "\n";
+			cadena.append(producto.toString() + "\n");
 		}
 		return "Nevera:\n" + cadena;
 	}
 	
 	String mostrarLista() {
-		String cadena = "";
+		StringBuilder cadena = new StringBuilder("");
 		for (Articulo producto : getNevera()) {
 			if(producto.getExistencias()<=producto.getMinimo())
-			cadena += producto.getNombre() + "\n";
+			cadena.append(producto.getNombre() + "\n");
 		}
 		return "Lista de la compra:\n" + cadena;
 	}
